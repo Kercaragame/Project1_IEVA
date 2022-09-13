@@ -38,7 +38,11 @@ public class MyPlayerController : MonoBehaviour
     void Update()
     {
         //tcheck ground
-        grounded = Physics.Raycast(this.transform.position, Vector3.down, playerHeight / 2 + 0.05f, isGroundMask);
+        grounded = Physics.Raycast(this.transform.position, Vector3.down, playerHeight / 2 + 0.05f, isGroundMask) | Physics.Raycast(new Vector3(transform.position.x + 0.2f, transform.position.y, transform.position.z), Vector3.down, playerHeight / 2 + 0.05f, isGroundMask) | Physics.Raycast(new Vector3(transform.position.x - 0.2f, transform.position.y, transform.position.z), Vector3.down, playerHeight / 2 + 0.05f, isGroundMask);
+        Debug.DrawRay(transform.position, Vector3.down, Color.green);
+        Debug.DrawRay(new Vector3(transform.position.x+0.2f,transform.position.y,transform.position.z), Vector3.down, Color.green);
+
+
         MyInput();
         SpeedControle();
         //print(rb.velocity.magnitude);
