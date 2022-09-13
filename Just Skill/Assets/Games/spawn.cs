@@ -10,7 +10,7 @@ public class spawn : MonoBehaviour
 
     //probability ne ennemy spawn
     const float increaseProbability = 0.01f;
-    float probability = 0.0f;
+    float probability = 0.5f;
 
 
 
