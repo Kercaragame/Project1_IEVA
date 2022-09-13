@@ -14,6 +14,8 @@
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
+/[Uu]serSettings/
+/[Pp]rojectSettings/
 
 # Recordings can get excessive in size
 /[Rr]ecordings/
