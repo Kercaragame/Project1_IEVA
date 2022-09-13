@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour
         Vector3 viewDir = player.position - new Vector3(this.transform.position.x, player.position.y, this.transform.position.z);
         orientation.forward = viewDir.normalized;
 
-        //rotate Player
+        //rotate player
         playerCharacter.LookAt(targetLookAt);
 
     }
@@ -43,3 +43,9 @@ if(inputDir != Vector3.zero)
 {
     playerCharacter.forward = Vector3.Slerp(playerCharacter.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
 }*/
+
+//rotate Player
+//Vector3 combatViewDir = targetLookAt.position - new Vector3(this.transform.position.x, targetLookAt.position.y, this.transform.position.z);
+//orientation.forward = combatViewDir.normalized;
+
+//playerCharacter.forward = combatViewDir.normalized;
