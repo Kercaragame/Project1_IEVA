@@ -8,6 +8,8 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
+/[Uu]serSettings/
+/[Pp]rojectSettings/
 
 /[Mm]emoryCaptures/
 #/Assets/Hovl Studio/
