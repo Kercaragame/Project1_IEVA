@@ -14,6 +14,8 @@ public class Fire : MonoBehaviour
     //reference
     public Camera myCamera;
     public Transform firePoint;
+    public AudioSource fireSource;
+    public AudioClip fireSong;
 
 
     // Start is called before the first frame update
@@ -39,8 +41,15 @@ public class Fire : MonoBehaviour
         }
     }
 
+    private void playSong()
+    {
+        fireSource.PlayOneShot(fireSong);
+
+    }
+
     public void callFire()
     {
+        playSong();
         readyToShoot = false;
         //create raycast
         Ray ray = myCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
