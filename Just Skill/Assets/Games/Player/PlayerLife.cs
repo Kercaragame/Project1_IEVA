@@ -6,6 +6,7 @@ public class PlayerLife : MonoBehaviour
 {
 
     public string enemyTag;
+    public string deadGroundTag;
     public int playerLife;
     public int damageTaken;
     private bool playerDead = false;
@@ -23,6 +24,10 @@ public class PlayerLife : MonoBehaviour
             playerLife -= damageTaken;
             if (playerLife <= 0) killPlayer();
 
+        }
+        if(collision.gameObject.tag == deadGroundTag)
+        {
+            killPlayer();
         }
     }
 

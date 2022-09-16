@@ -8,9 +8,10 @@ public class spawn : MonoBehaviour
 
     const float radius = 10f;
 
+    [Header("Probability")]
     //probability ne ennemy spawn
-    const float increaseProbability = 0.01f;
-    float probability = 0.5f;
+    public float increaseProbability = 0.01f;
+    public float probability = 0.5f;
 
 
 
