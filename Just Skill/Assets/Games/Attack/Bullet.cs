@@ -48,12 +48,10 @@ public class Bullet : MonoBehaviour
     {
         if (alreadyExplosing) return;
         alreadyExplosing = true;
-        print("explosionnn");
         if (explostion != null) Instantiate(explostion, transform.position, Quaternion.identity);
 
         //Check for ennemy
         Collider[] enemies = Physics.OverlapSphere(transform.position, explosionRange, enemyMask);
-        print(enemies.Length);
         for(int i =0;i < enemies.Length; i++)
         {
             //Do smthg on enemies

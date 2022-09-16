@@ -13,20 +13,24 @@ public class score : MonoBehaviour
     {
 
         highscore.text = PlayerPrefs.GetInt("highscore",0).ToString();
+        if (GameObject.Find("gameManager"))
+        {
+            int score = GameObject.Find("gameManager").GetComponent<gameManager>().scoreNumer;
+            setScore(score);
+        }
         
     }
 
-    public void gameEnd(){
 
-        int newScore = 1;
-
-        scoreGame.text = newScore.ToString();
-
-        if(newScore> PlayerPrefs.GetInt("highscore",0)){
-            PlayerPrefs.SetInt("highscore",newScore);
-            highscore.text = newScore.ToString();
+    public void setScore(int score)
+    {
+        scoreGame.text = score.ToString();
+        //from here
+        if (score > PlayerPrefs.GetInt("highscore", 0))
+        {
+            PlayerPrefs.SetInt("highscore", score);
+            highscore.text = score.ToString();
         }
-        
     }
 
 
